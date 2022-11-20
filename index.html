@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shortest Path using Dijkstra's Algorithm</title>
+<link rel="stylesheet" type="text/css" href="dijkstra.css">
+</head>
+<body>
+<svg width="2000" height="920" version="1.1" id="shortestPathSvg" xmlns="http://www.w3.org/2000/svg">
+	<g id="gedge"></g>
+	<g id="gvertex"></g>
+</svg>
+<br>
+<button id="savesvgbutton">Save graph</button>
+<table>
+	<tr>
+		<td><input type="radio" name="radWorkMode" value="drawVertex" checked=""></td>
+		<td>Draw point</td>
+		<td><input type="radio" name="radWorkMode" value="drawEdge"></td>
+		<td>Draw edge</td>
+		<td><input type="radio" name="radWorkMode" value="setStart"></td>
+		<td>Set Start</td>
+	</tr>
+	<tr>
+		<td><input type="radio" name="radWorkMode" value="delVertexEdge"></td>
+		<td>Delete point or edge</td>
+		<td><input type="radio" name="radWorkMode" value="setCostLabel"></td>
+		<td>Set cost or label</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+<table id="dijkstraSteps"></table>
+
+<!-- The Modal -->
+<div id="divEdgeCost" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeDialogEdgeCost()">&times;</span>
+    <label>Edge Cost</label>
+        <input type="number" maxlength="4" required="required" autocomplete="off" min="1" max="1000" name="inputEdgeCost" id="inputEdgeCost">
+        <button id="btnSetEdgeCost">Set value</button>
+
+  </div>
+</div>
+
+<div id="divVertexLabel" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeDialogVertexLabel()">&times;</span>
+    <label>Point Label</label>
+        <input type="text" maxlength="1" required="required" autocomplete="off" name="inputVertexLabel" id="inputVertexLabel">
+        <button id="btnSetVertexLabel">Set value</button>
+
+  </div>
+</div>
+
+
+<script src="dijkstra.js"></script>
+
+<h1>Genshin Speedrun Contest: Dijkstra's Algorithm Solver</h1>
+<p>CS 5800
+<h2>Usage</h2>
+<ul>
+<li>While <b>Draw point</b> is selected, click anywhere in the map to create a point.</li>
+<li>To draw an edge between two points, select the <b>Draw edge</b> radio button, then click on the points you want to connect.</li>
+<li>To change the cost or point label, click on the cost or the label while <b>Set cost or label</b> radio button is selected.</li>
+<li>Finally, to run the algorithm, select <b>Set Start</b> then click on the starting point.</li>
+</ul>
+
+
+</body>
+</html>
