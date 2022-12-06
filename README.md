@@ -3,7 +3,7 @@
 Our project focuses on finding the shortest path in a given map. The idea comes from a speedrun contest of a video game, Genshin Impact. The contest requires players to get to the destination as fast as possible using combined methods given in the game: running, sprinting and wind glider.
 
 In this project, we will first implement the shortest path finding algorithm on the base scenario where the only method allowed is running. Then we will bring in more moving methods, sprinting and wind glider, to enrich our model.
-After applying the different method, the shortest path will be the fastest way from the source point to the destination. Here we will use the time-distance function **Time = Distance / Speed(factor)** .
+After applying the different method, the shortest path will be the fastest way from the source point to the destination. Here we will use the time-distance function: **Time = Distance / Speed(factor)** .
 
 You can save the graph as an SVG file.</p>
 
